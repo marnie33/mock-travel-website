@@ -1,0 +1,172 @@
+<!--Created by: Cy <3
+(aka: Marnie Tisdale)
+Date Created: 10/1/14
+Last Modified: 10/8/14
+
+Summary: This is an example of a travel website-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" type="text/css"/>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <!--^my stylesheet for "homegrown" css-->
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <!--^ my JavaScript/jQuery file for index.html-->
+    
+</head>
+    <body>
+        
+        <!--header-->
+        <div class="header">
+            <div class="container">
+                <div id="open">Acme Travel Company</div><br>
+                <div id="subopen">Flights, hotels, rental cars<br>
+                for your next exotic destination!</div><br>
+            </div>
+        </div><!--end of header-->
+        
+        <!--main section of page-->
+        <div id="jumbo" class="jumbotron">
+            <div class="container">
+                
+                <div class="row">
+                    <!--button bar at top-->
+                    <div class="buttonbar"><center>
+                        <button class="bar" onclick="Alert.bar('Flight Specials','https://c2.staticflickr.com/4/3313/3186030403_1098c95c09_z.jpg?zz=1','Special deals on flights are frequently available. Todays deal is round trip tickets to Hawaii for $255.00 from any US location! Act quick, while tickets are still open!')">Flights</button>
+                        <button class="bar" onclick="Alert.bar('Hotel Specials','http://s0.geograph.org.uk/photos/47/75/477513_68795335.jpg','Look at our partners for a 10 percent discount on your stay!')">Hotels</button>
+                        <button class="bar" onclick="Alert.bar('Rental Car Specials','http://farm4.staticflickr.com/3189/3017549588_44d6c9548f_o.jpg','Look at our partners for exclusive deals on having your own ride to explore in during your dream getaway')">Rental Cars</button>
+                        <button class="bar" onclick="Alert.bar('Special Attraction Packages','http://upload.wikimedia.org/wikipedia/commons/a/a3/Auckland_Zoo_Entrance.JPG','Right now, the Auckland Zoo in New Zealand. Flight, hotel, park tickets included, $3,010.00 for a family of four. Keep checking back for more offers!')">Attractions</button>
+                        <button class="bar" onclick="Alert.bar('Special Tour Packages','http://upload.wikimedia.org/wikipedia/commons/6/66/Louvre_Museum_Wikimedia_Commons.jpg','Right now we are offering the tour package for the Louvre in Paris, France. Travel, hotel, local transportation and an exclusive tour of the worlds top art museum! Keep checking back for more offers!')">Tours</button>
+                    </div></center>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <!--menu, left side of screen-->
+                        <div class="menu">
+                            <!--pick your flight table-->
+                            <div class="pick">
+                                <table>
+                                    <tr>
+                                        <td>Leaving From:</td>
+                                        <td><input id="fromloc" type="textbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Going To:</td>
+                                        <td><input id="toloc" type="textbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Departure Date:</td>
+                                        <td><input type="text" id="dd"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Return Date:</td>
+                                        <td><input type="text" id="rd"></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><button class="pickbutton" onclick="Alert.checkflights()">Check Flights</button></td>
+                                    </tr>
+                                </table>
+                            </div><br><!--end check flights table-->
+                            <!--other destinations list-->
+                            <ul id="places">
+                                <li><button id="bde" class="more" onclick="Alert.tag('Berlin, Germany','http://upload.wikimedia.org/wikipedia/commons/3/35/Puerta_de_Brandenburgo_Brandenburg_Gate_in_Berlin_Germany_January_2011.jpg','Visit the capital of Germany, starting at $249.00 a flight!')">Berlin, Germany</button></li>
+                                <li><button id="dir" class="more" onclick="Alert.tag('Dublin, Ireland','http://upload.wikimedia.org/wikipedia/commons/thumb/0/01/St-Anns-Church-Dublin-Morning-2012.JPG/1280px-St-Anns-Church-Dublin-Morning-2012.JPG','Visit the Emerald Isle, starting at $315.00 a flight!')">Dublin, Ireland</button></li>
+                                <li><button id="ceg" class="more" onclick="Alert.tag('Cairo, Egypt','http://upload.wikimedia.org/wikipedia/commons/9/91/Great_Sphinx_of_Giza_(foreground)_Pyramid_of_Menkaure_(background)._Cairo,_Egypt,_North_Africa.jpg','Explore the Great pyramids, starting at $425.00 a flight!')">Cairo, Egypt</button></li>
+                                <li><button id="sau" class="more" onclick="Alert.tag('Sydney, Australia','http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sydney_Opera_House_Close_up_HDR_Sydney_Australia.jpg/1024px-Sydney_Opera_House_Close_up_HDR_Sydney_Australia.jpg','Explore the land down under, starting at $229.00 a flight!')">Sydney, Australia</button></li>
+                                <li><button id="bch" class="more" onclick="Alert.tag('Beijing, China','http://upload.wikimedia.org/wikipedia/commons/d/d8/Lady_Street,_Beijing_China.JPG','Investigate the worlds oldest market place, starting at $450.00 a flight!')">Beijing, China</button></li>
+                                <li><button id="mru" class="more" onclick="Alert.tag('Moscow, Russia','https://c2.staticflickr.com/2/1344/905576796_76fc0d6117_b.jpg',' Visit the majesty starting for $335.00 a flight!')">Moscow, Russia</button></li>
+                            </ul><!--end other destinations list--><br>
+                            <!--ad space-->
+                            <div class="adspace">
+                                <div id="adtitle">Switch to Gas<br></div>
+                                <img class="adpic" src="http://upload.wikimedia.org/wikipedia/commons/f/f2/Light_my_fire_(2152952690).jpg"><br>
+                                <div id="adsub">Switching to gas can save you hundreds!</div>
+                            </div>
+                        </div><!--end menu-->
+                    </div>
+                    <div class="col-md-8">
+                        <!--updates box-->
+                        <div class="updates">
+                            <div id="updatetitle">Acme Travel Company<br></div>
+                            <div id="subupdatetitle">We help you reach your dreams!<br></div>
+                            &nbsp;<br>
+                            <div id="updatehead">Travel is Achievable!<br></div>
+                            &nbsp;<br>
+                            Is there some place you have always dreamed of visiting? Perhaps you have always wanted to see the Great Pyramids, or walk down the Champs Elysees? Perhaps you have not because it is unrealistically expensive. Our goal is to help you see the world, for a reasonable price tag!<br>
+                            &nbsp;<br>
+                            <div id="updatehead">Time off Work<br></div>
+                            &nbsp;<br>
+                            Some times, even when the cost is manageable, taking the time off from work (or school, or other activities) seems impossible. With the help of one of our time manager experts, we will work with you to discover where the time exists in your schedule! You really can take that trip to Fuji without losing out in your every day life, let us help you find out how!<br>
+                            &nbsp;<br>
+                            <div id="updatehead">Travel Abroad Tips<br></div>
+                            &nbsp;<br>
+                            Is this your first time traveling abroad? Do you speak the language? That can be very intimidating. Do not allow these fears to hold you back from the adventures you have always dreamed of! Visit our site guide for these locations, we have maps and guides in English for you as well as some important phrases in the native language. We will help nullify your fear and free you to chase your dreams!
+                        </div><!--end updates-->
+                        <!--special sections-->
+                        <div class="locs">
+                            <div class="special">
+                                <div id="specialtitle">Paris, France<br></div>
+                                <img class="img"  src="https://c1.staticflickr.com/3/2223/2157862605_0599cedc90.jpg"><br>
+                                Fabulous shopping, topnotch museums, and more! Come explore!<br>
+                            </div>
+                            <div class="special">
+                                <div id="specialtitle">London, England<br></div>
+                                <img class="img" src="https://c2.staticflickr.com/4/3112/3103896345_b10a2f104a_z.jpg?zz=1"><br>
+                                Where else can you see Big Ben and visit Buckingham Palace? Check them out!<br>
+                            </div>
+                            <div class="special">
+                                <div id="specialtitle">Rome, Italy<br></div>
+                                <img class="img" src="http://upload.wikimedia.org/wikipedia/commons/5/53/Colosseum_in_Rome,_Italy_-_April_2007.jpg"><br>
+                                Visit one of the oldest cities! See ancient ruins, explore the vatican, and more!<br>
+                            </div>
+                        </div><!--end locations-->
+                    </div>
+                </div><!--end of 2nd row-->
+                
+            </div>
+        </div><!--end of jumbotron/main page-->
+        
+        <!--footer-->
+        <div class="footer">
+            <div class="container">
+                <div id="subopen"><div class="pull-left"><a href="mailto:marnie_tisdale@yahoo.com">By: Cy &#60;3</a></div>
+                <div class="pull-right">2014 &copy;</div></div>
+            </div>
+        </div><!--end of footer-->
+        <!--sub footer section-->
+        <div class="subfoot">
+            <div class="container"><center>
+                <div class="col-md-4">
+                    About us<br>
+                    Airline Restrictions<br>
+                    Customs Advice<br>
+                </div>
+                <div class="col-md-4">
+                    Locations<br>
+                    Agents<br>
+                    Booking Info<br>
+                </div>
+                <div class="col-md-4">
+                    Careers<br>
+                    Return Policy<br>
+                    Exchange Policy<br>
+                </div>
+            </center></div>
+        </div>
+        
+    <!--placeholders to put dialog and screen overlay into-->
+    <div id="boxoverlay"></div>
+    <div id="boxholder"></div>        
+        
+    </body>
+</html> 
