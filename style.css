@@ -1,0 +1,269 @@
+/*formats header*/
+.header {
+    border: 4px groove black;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    padding: 15px;
+    height: 200px;
+    background-image: url(http://upload.wikimedia.org/wikipedia/commons/4/49/Swiss_Jungfrau_mountains.jpg);
+    background-size: 100% 100%;
+}
+
+/*formats footer*/
+.footer {
+    border: 2px groove black;
+    margin-bottom: 25px;
+    margin-top: 5px;
+    padding: 15px;
+    background-image: url(http://upload.wikimedia.org/wikipedia/commons/4/49/Zdiar1.jpg);
+    background-size: 100% 100%;
+}
+
+/*makes jumbotron background visible*/
+#jumbo {
+    background-color: transparent;
+}
+
+/*removes bullets from list*/
+ul {
+    list-style: none;
+}
+
+/*controls entire menu*/
+.menu {
+    border: 2px solid black;
+    padding: 10px;
+    height: 650px;
+    background-color: #ECF8E0;
+}
+
+/*controls entire button bar*/
+.buttonbar {
+    margin-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*controls entire updates section*/
+.updates {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 3px;
+    height: 325px;
+    overflow: auto;
+}
+
+/*formats picture ads at bottom*/
+.special {
+    border: 2px solid black;
+    padding: 10px;
+    display: inline-block;
+    width: 235px;
+    margin: 3px;
+    height: 300px;
+    background-color: #ECF8E0;
+}
+
+/*formats button bar at top*/
+.bar {
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 2px solid black;
+    background-color: #FAFAFA;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #151515;
+}
+
+/*sizes pictures for picture ads*/
+.img {
+    height: 200px;
+    width: 210px;
+    border: 5px solid black;
+}
+
+/*formats flight location picker*/
+.pick {
+    border: 2px solid black;
+    margin: 5px;
+    padding: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: white;
+}
+
+/*adds spacing to table*/
+td {
+    padding: 10px;
+}
+
+/*controls ad space bottom menu*/
+.adspace {
+    margin: 5px;
+    padding: 15px;
+    border: 2px solid black;
+    background-color: #FAFAFA;
+}
+
+/*controls ad space picture*/
+.adpic {
+    border: 2px solid black;
+    height: 50px;
+    width: 100%;
+}
+
+/*controls more locations buttons*/
+.more {
+    border: none;
+    background-color: transparent;
+}
+
+/*controls ^ on hover*/
+.hoverMore {
+    text-decoration: underline;
+}
+
+/*formats popups*/
+.dialogoverlay {
+    opacity: .9;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+    width: 100%;
+    z-index: 10;
+}
+
+.dialogbox {
+    position: fixed;
+    background: white;
+    border-radius: 7px;
+    width: 550px;
+    z-index: 10;
+    padding: 2px;
+}
+
+.dialogbox div {
+    background: white;
+    margin: 4px;
+    padding: 2px;
+}
+
+.dialogbox div #dialogboxhead {
+    background: white;
+    margin-bottom: 5px;
+    font-size: 22px;
+    padding: 10px;
+    height: 54px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 3px 3px 7px #151515;
+}
+
+.dialogbox div #dialogboxbody {
+    background: #ECF8E0;
+    padding: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: black;
+    border: 4px groove black;
+}
+
+.dialogbox div #dialogboxfoot {
+    background: white;
+    padding: 10px;
+    text-align: right;
+    margin-top: 5px;
+    height: 54px;
+}
+
+#okbtn {
+    background: #ECF8E0;
+    font-size: 14px;
+    color: black;
+    border: 2px solid black;
+    font-weight: bold;
+    text-shadow: 3px 3px 7px grey;
+}
+
+/*sub footer section*/
+.subfoot {
+    margin: 25px;
+    color: darkgrey;
+    font-size: 8px;
+}
+
+/*formats page title*/
+#open {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 5px 5px 9px black;
+}
+
+/*formats page subtitle*/
+#subopen {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 3px 3px 7px black;
+}
+
+/*formats updates section*/
+#updatetitle {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#subupdatetitle {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#updatehead {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/*formats flight pick button*/
+.pickbutton {
+    background-color: white;
+    border: 2px solid black;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px grey;
+}
+
+/*formats places fonts*/
+#places {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/*formats ad section*/
+#adtitle {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#adsub {
+    font-size: 12px;
+}
+
+/*formats places title*/
+#specialtitle {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+/*sets page font*/
+body {
+    font-family: 'Droid Sans', sans-serif;
+}
